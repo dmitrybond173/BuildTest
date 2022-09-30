@@ -113,7 +113,7 @@ jobs:
       run: gci
 
     - name: Check build artifacts.2
-      run: cd ${{ Solution_Name }}
+      run: cd ${{ env.Solution_Name }}
 
     - name: Check build artifacts.3
       run: gci
