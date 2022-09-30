@@ -108,11 +108,11 @@ jobs:
     #- name: Remove the pfx
     #  run: Remove-Item -path $env:Wap_Project_Directory\GitHubActionsWorkflow.pfx
 
-    - name: Check build artifacts
-      run: |
-      	cd
-      	dir
-      	dir *.*
+    - name: Check build artifacts.1
+      run: cd
+
+    - name: Check build artifacts.2
+      run: dir
 
     # Upload the MSIX package: https://github.com/marketplace/actions/upload-a-build-artifact
     - name: Upload build artifacts
