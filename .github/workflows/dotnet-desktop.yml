@@ -110,7 +110,7 @@ jobs:
 
     - name: Check build artifacts
       run: |
-      	cd 
+      	cd
       	dir
       	dir *.*
 
