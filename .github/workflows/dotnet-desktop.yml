@@ -57,7 +57,7 @@ jobs:
 
     env:
       Solution_Name: ConsoleApp1                                # Replace with your solution name, i.e. MyWpfApp.sln.
-      Solution_Filename: ${{ env.Solution_Name }}.sln           # Replace with your solution name, i.e. MyWpfApp.sln.
+      Solution_Filename: ConsoleApp1.sln                        # Replace with your solution name, i.e. MyWpfApp.sln.
       Test_Project_Path: .                                      # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
       Wap_Project_Directory: .                                  # Replace with the Wap project directory relative to the solution, i.e. MyWpfApp.Package.
       Wap_Project_Path: .                                       # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
@@ -110,7 +110,7 @@ jobs:
     #  run: Remove-Item -path $env:Wap_Project_Directory\GitHubActionsWorkflow.pfx
 
     - name: Check build artifacts.1
-      run: gci
+      run: gci -recurse
 
     - name: Check build artifacts.2
       run: gci ${{ env.Solution_Name }}
